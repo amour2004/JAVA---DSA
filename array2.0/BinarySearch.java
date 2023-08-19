@@ -5,6 +5,7 @@ public class BinarySearch {
         while (start <= end) {
             int mid = (start + end) / 2;
             if (numbers[mid] == key) {
+                return mid;
             }
             if (numbers[mid] > key) { // for left part of an array
                 end = mid - 1;
