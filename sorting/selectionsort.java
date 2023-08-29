@@ -1,22 +1,25 @@
 public class selectionsort {
-    public static void ssort(int numbers[]){
-        for(int i = 0;i<numbers.length-1;i++){
-            int minvalue = i;
-            for(int j = i + 1 ;j<numbers.length;j++){
-                if(numbers[minvalue]<numbers[j]){
-                    minvalue = j;
+    public static void sortArray(int[] nums) {
+        
+        for(int i = 0;i<nums.length-1;i++){
+            int min = i;
+            for(int j = i+1;j<nums.length;j++){
+                if(nums[min]>nums[j]){
+                    min = j;
                 }
-                int temp = numbers[minvalue];
-                numbers[minvalue] = numbers[j];
-                numbers[j] = temp;
             }
+            int temp = nums[min];
+            nums[min] = nums[i];
+            nums[i] = temp;
         }
-        for(int k = 0 ;k<numbers.length;k++){
-            System.out.print(numbers[k]+" ");
-        }
+        
     }
-    public static void main(String args[]){
-        int numbers[] = { 5 , 3, 1, 2, 4};
-        ssort(numbers);
+    public static void main(String[] args) {
+        int nums[] = {5,2,3,1};
+       sortArray(nums);
+       for(int i = 0;i<nums.length;i++){
+        System.out.print(nums[i]+" ");
+       }
     }
 }
+
