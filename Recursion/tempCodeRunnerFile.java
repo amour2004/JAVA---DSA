@@ -1,0 +1,1 @@
+decresingNumber(num-1);
